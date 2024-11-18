@@ -1,6 +1,6 @@
 @url = http://localhost:8080
 
-@token =
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgUXVpenplcyIsInN1YiI6ImFkbWluIiwiZXhwIjoxNzMxOTc0MDgwfQ.sO36K5optISZb-J8yyo0lTVYLktOazkToMCtZvrUCfM
 
 ###
 GET {{url}}/tarefas
@@ -16,9 +16,9 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-    "titulo": "Título XYZ",
-    "descricao": "Descrição XYZ",
-    "dataInicio": "2024-11-10",
+    "titulo": "Tarefa criação API",
+    "descricao": "Prova final professor Marco",
+    "dataInicio": "2024-11-17",
     "dataConclusao": "2024-11-20"
 }
 
@@ -36,7 +36,7 @@ DELETE {{url}}/tarefas/1
 Authorization: Bearer {{token}}
 
 ###
-POST {{url}}/tarefas/1/colaboradores/1
+POST {{url}}/tarefas/1/colaboradores/2
 Authorization: Bearer {{token}}
 
 ###
