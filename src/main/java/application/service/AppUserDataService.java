@@ -19,7 +19,7 @@ public class AppUserDataService implements UserDetailsService {
         Usuario usuario = usuarioRepo.findByNomeDeUsuario(username);
 
         if (usuario == null) {
-            throw new UsernameNotFoundException("Usuário Não Encontrado");
+            throw new UsernameNotFoundException("User not found");
         }
 
         UserDetails userDetails = org.springframework.security.core.userdetails.User.builder()

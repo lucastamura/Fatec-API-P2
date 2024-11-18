@@ -25,7 +25,7 @@ public class ColaboradorService {
         Optional<Colaborador> resultado = repository.findById(id);
         if (resultado.isEmpty()) {
             throw new ResponseStatusException(
-                    HttpStatus.NOT_FOUND, "Colaborador Não Encontrado");
+                    HttpStatus.NOT_FOUND, "Colaborador não encontrato");
         }
         return new ColaboradorDTO(resultado.get());
     }
@@ -39,7 +39,7 @@ public class ColaboradorService {
     public ColaboradorDTO update(long id, ColaboradorDTO colaboradorDTO) {
         if (!repository.existsById(id)) {
             throw new ResponseStatusException(
-                    HttpStatus.NOT_FOUND, "Colaborador Não Encontrado");
+                    HttpStatus.NOT_FOUND, "Colaborador não encontrado");
         }
         Colaborador novo = new Colaborador(colaboradorDTO);
         novo.setId(id);
